@@ -1,0 +1,1 @@
+# stilllife_przekierowanie
