@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Przekierowanie do Facebooka</title>
   <style>
     body {
@@ -25,10 +25,23 @@
       font-size: 1.2em;
       margin-bottom: 10px;
     }
-  </style>
 
+    a {
+      display: inline-block;
+      font-size: 1.1em;
+      background: #1877f2;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    a:hover {
+      background-color: #145dc2;
+    }
+  </style>
   <script>
-    // Spróbuj wyrwać się z iframe PRV
     if (window.top !== window.self) {
       window.top.location = window.location.href;
     }
@@ -41,7 +54,13 @@
 </head>
 <body>
   <img src="logo.jpg" alt="Logo STILL LIFE" />
-  <p>Z powodów technicznych strona STILL LIFE jest tymczasowo niedostępna.<br>
-     Za chwilę nastąpi przekierowanie do naszego profilu na Facebooku.</p>
+  <p>
+    Z powodów technicznych strona STILL LIFE jest tymczasowo niedostępna.<br />
+    Przepraszamy za te reklamy powyżej :))
+    Za chwilę nastąpi przekierowanie do naszego profilu na Facebooku.
+  </p>
+  <a href="https://www.facebook.com/stilllife94/?locale=pl_PL" target="_blank" rel="noopener noreferrer">
+    Kliknij tutaj, aby przejść od razu
+  </a>
 </body>
 </html>
