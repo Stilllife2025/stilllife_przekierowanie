@@ -12,16 +12,17 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start; /* zmiana z center na start */
       align-items: center;
       text-align: center;
-      padding: 0 20px;
+      padding: 60px 20px 20px;
     }
 
     img {
-      max-width: 200px;
-      margin-bottom: 30px;
-    }
+  max-width: 200px;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.3));
+}
 
     p {
       font-size: 1.3em;
@@ -44,9 +45,18 @@
     }
 
     .note {
-      margin-top: 30px;
-      font-size: 0.9em;
-      color: #ccc;
+      margin-top: 50px;
+      font-size: 0.85em;
+      color: #aaa;
+    }
+
+    .url-container {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .url {
@@ -54,15 +64,34 @@
       background-color: #222;
       padding: 5px 10px;
       border-radius: 4px;
-      display: inline-block;
-      margin-top: 5px;
-      word-break: break-all;
+      user-select: all;
+    }
+
+    button.copy-btn {
+      background: #333;
+      color: #ccc;
+      border: none;
+      padding: 5px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.85em;
+    }
+
+    button.copy-btn:hover {
+      background: #444;
+      color: #fff;
     }
   </style>
   <script>
-    // Jeśli strona osadzona w ramce, wyjdź z niej
     if (window.top !== window.self) {
       window.top.location = window.location.href;
+    }
+
+    function copyLink() {
+      const url = "https://www.facebook.com/stilllife94";
+      navigator.clipboard.writeText(url).then(() => {
+        alert("Skopiowano link do schowka!");
+      });
     }
   </script>
 </head>
@@ -70,14 +99,18 @@
   <img src="logo.jpg" alt="STILL LIFE Logo" />
   <p>
     Nasza strona gra teraz na Facebooku 🎸<br />
-    Kliknij niżej i wskakuj do nas.
+    Kliknij niżej i wskakuj do nas!
   </p>
   <a class="button" href="https://www.facebook.com/stilllife94/?locale=pl_PL" target="_blank" rel="noopener noreferrer">
     Lecimy na Facebooka
   </a>
+
   <div class="note">
-    Jeśli nic się nie dzieje,<br />wklej ten adres w przeglądarkę:
-    <div class="url">https://www.facebook.com/stilllife94</div>
+    Jeśli coś nie działa,<br />skopiuj ten adres do przeglądarki:
+    <div class="url-container">
+      <span class="url">https://www.facebook.com/stilllife94</span>
+      <button class="copy-btn" onclick="copyLink()">Kopiuj</button>
+    </div>
   </div>
 </body>
 </html>
