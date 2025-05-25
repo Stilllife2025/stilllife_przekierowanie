@@ -15,6 +15,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 0 20px;
     }
 
     img {
@@ -27,7 +28,7 @@
       margin-bottom: 20px;
     }
 
-    a {
+    a.button {
       display: inline-block;
       font-size: 1.1em;
       background: #1877f2;
@@ -38,30 +39,45 @@
       cursor: pointer;
     }
 
-    a:hover {
+    a.button:hover {
       background-color: #145dc2;
+    }
+
+    .note {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    .url {
+      font-family: monospace;
+      background-color: #222;
+      padding: 5px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 5px;
+      word-break: break-all;
     }
   </style>
   <script>
-    // Jeśli strona osadzona w ramce, wybij się z niej
+    // Jeśli strona osadzona w ramce, wyjdź z niej
     if (window.top !== window.self) {
       window.top.location = window.location.href;
     }
-
-    // Automatyczne przekierowanie po 5 sekundach
-    setTimeout(function () {
-      window.location.href = "https://www.facebook.com/stilllife94/?locale=pl_PL";
-    }, 5000);
   </script>
 </head>
 <body>
   <img src="logo.jpg" alt="STILL LIFE Logo" />
   <p>
-    ...Nasza strona gra teraz na Facebooku 🎸<br />
-    Kliknij niżej i wskakuj do nas!
+    Nasza strona gra teraz na Facebooku 🎸<br />
+    Kliknij niżej i wskakuj do nas.
   </p>
-  <a href="https://www.facebook.com/stilllife94/?locale=pl_PL">
+  <a class="button" href="https://www.facebook.com/stilllife94/?locale=pl_PL" target="_blank" rel="noopener noreferrer">
     Lecimy na Facebooka
   </a>
+  <div class="note">
+    Jeśli nic się nie dzieje,<br />wklej ten adres w przeglądarkę:
+    <div class="url">https://www.facebook.com/stilllife94</div>
+  </div>
 </body>
 </html>
