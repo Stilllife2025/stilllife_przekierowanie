@@ -2,28 +2,29 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <title>Przekierowanie do Facebooka</title>
+  <title>STILL LIFE → Facebook</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
-      background-color: #f0f2f5;
-      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      flex-direction: column;
     }
 
     img {
       max-width: 200px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     p {
-      font-size: 1.2em;
-      margin-bottom: 10px;
+      font-size: 1.3em;
+      margin-bottom: 20px;
     }
 
     a {
@@ -42,25 +43,25 @@
     }
   </style>
   <script>
+    // Jeśli strona osadzona w ramce, wybij się z niej
     if (window.top !== window.self) {
       window.top.location = window.location.href;
     }
 
-    // Automatyczne przekierowanie po 3 sekundach
+    // Automatyczne przekierowanie po 5 sekundach
     setTimeout(function () {
       window.location.href = "https://www.facebook.com/stilllife94/?locale=pl_PL";
-    }, 3000);
+    }, 5000);
   </script>
 </head>
 <body>
-  <img src="logo.jpg" alt="Logo STILL LIFE" />
+  <img src="logo.jpg" alt="STILL LIFE Logo" />
   <p>
-    Z powodów technicznych strona STILL LIFE jest tymczasowo niedostępna.<br />
-    Przepraszamy za te reklamy powyżej :))
-    Za chwilę nastąpi przekierowanie do naszego profilu na Facebooku.
+    ...Nasza strona gra teraz na Facebooku 🎸<br />
+    Kliknij niżej i wskakuj do nas!
   </p>
-  <a href="https://www.facebook.com/stilllife94/?locale=pl_PL" target="_blank" rel="noopener noreferrer">
-    Kliknij tutaj, aby przejść od razu
+  <a href="https://www.facebook.com/stilllife94/?locale=pl_PL">
+    Lecimy na Facebooka
   </a>
 </body>
 </html>
