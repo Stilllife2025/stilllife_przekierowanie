@@ -7,15 +7,13 @@
     body {
       margin: 0;
       height: 100vh;
+      background-color: #f0f2f5;
+      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
-    }
-
-    .container {
       text-align: center;
+      flex-direction: column;
     }
 
     img {
@@ -27,33 +25,23 @@
       font-size: 1.2em;
       margin-bottom: 10px;
     }
-
-    a {
-      display: inline-block;
-      font-size: 1.1em;
-      background: #1877f2;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-
-    a:hover {
-      background-color: #145dc2;
-    }
   </style>
-</head>
-<body>
-  <div class="container">
-    <img src="logo.jpg" alt="Logo strony" />
-    <p>Strona STILL LIFE jest chwilowo niedostępna. Za moment przekierujemy Cię na nasz profil na Facebooku.</p>
-    <a id="go" href="https://www.facebook.com/stilllife94/?locale=pl_PL" target="_blank">Kliknij tutaj</a>
-  </div>
 
   <script>
-    setTimeout(() => {
-      document.getElementById('go').click();
+    // Spróbuj wyrwać się z iframe PRV
+    if (window.top !== window.self) {
+      window.top.location = window.location.href;
+    }
+
+    // Automatyczne przekierowanie po 2 sekundach
+    setTimeout(function () {
+      window.location.href = "https://www.facebook.com/stilllife94/?locale=pl_PL";
     }, 2000);
   </script>
+</head>
+<body>
+  <img src="logo.jpg" alt="Logo STILL LIFE" />
+  <p>Z powodów technicznych strona STILL LIFE jest tymczasowo niedostępna.<br>
+     Za chwilę nastąpi przekierowanie do naszego profilu na Facebooku.</p>
 </body>
 </html>
